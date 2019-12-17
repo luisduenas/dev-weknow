@@ -1,0 +1,182 @@
+/**
+ * This injects Tailwind's base styles, which is a combination of
+ * Normalize.css and some additional base styles.
+ *
+ * You can see the styles here:
+ * https://github.com/tailwindcss/tailwindcss/blob/master/css/base.css
+ *
+ * If using `postcss-import`, use this import instead:
+ *
+ * @import "tailwindcss/base";
+ */
+@tailwind base;
+
+
+/* Blog article base html format */
+
+h1, h2, h3, h4, h5 {
+  margin-bottom: .6em;
+  margin-top: .6em;
+  font-weight: 500;
+}
+
+.article h1, h1 {
+    @apply text-5xl;
+  }
+.article h2, h2 {
+  @apply text-4xl;
+  margin-bottom: .6em;
+  margin-top: .6em;
+  font-weight: 500;
+}
+.article h3, h3 {
+  @apply text-3xl;
+  margin-bottom: .6em;
+  margin-top: .6em;
+  font-weight: 500;
+}
+.article h4, h4 {
+    @apply text-base;
+  }
+.article h5, h5 {
+    @apply text-sm;
+  }
+.article a {
+    @apply text-blue-600;
+  }
+.article p {
+    font-size: 22px;
+    margin-bottom: .6rem;
+  }
+.article pre > code {
+    overflow: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding: 40px;
+    font-family: monospace;
+    font-size: 1em;
+    background: #f8f8f8;
+    margin-bottom: .6rem;
+  }
+.article iframe {
+  margin: 1rem auto;
+  max-width: 100%;
+}
+
+.article table{
+  border-collapse: collapse;
+}
+.article td, .article th, .article table{
+  border: 1px solid #CCC;
+    padding: 10px;
+}
+
+/* Careers base html format */
+.career ul, ul {
+  list-style: disc;
+  padding-left: 40px;
+}
+
+p {
+  font-size: 22px;
+  margin-bottom: .6rem;
+}
+
+.facebook{
+  border: 1px solid #3b5998;
+  color: #3b5998;
+}
+.twitter{
+  border: 1px solid  #1da1f2;
+  color: #1da1f2;
+}
+.linkedin{
+  border: 1px solid  #0077b5;
+  color: #0077b5;
+}
+.reddit{
+  border: 1px solid #ff4500;
+  color: #ff4500;
+}
+.whatsapp{
+  border: 1px solid #128C7E;
+  color: #128C7E;
+}
+
+code{
+  font-size: 0.6em;
+  display: inline-block;
+  background: whitesmoke;
+  word-break: break-all;
+}
+@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+  /* IE10+ specific styles go here */
+
+  .ie-nav-menu{
+    background-color: #fff !important;
+    height: 120px;
+  }
+  .ie-nav-menu > div.flex{
+    height: 120px;
+
+  }
+  .ie-nav-menu .text-white>a{
+    color: #644B78 !important;
+  }
+  .ie-nav-menu svg{
+    fill: #644B78;
+  }
+}
+
+/**
+ * This injects any component classes registered by plugins.
+ *
+ * If using `postcss-import`, use this import instead:
+ *
+ * @import "tailwindcss/components";
+ */
+@tailwind components;
+
+/**
+ * Here you would add any of your custom component classes; stuff that you'd
+ * want loaded *before* the utilities so that the utilities could still
+ * override them.
+ *
+ * Example:
+ *
+ * .btn { ... }
+ * .form-input { ... }
+ *
+ * Or if using a preprocessor or `postcss-import`:
+ *
+ * @import "components/buttons";
+ * @import "components/forms";
+ */
+
+/**
+ * This injects all of Tailwind's utility classes, generated based on your
+ * config file.
+ *
+ * If using `postcss-import`, use this import instead:
+ *
+ * @import "tailwindcss/utilities";
+ */
+@tailwind utilities;
+
+/**
+ * Here you would add any custom utilities you need that don't come out of the
+ * box with Tailwind.
+ *
+ * Example :
+ *
+ * .bg-pattern-graph-paper { ... }
+ * .skew-45 { ... }
+ *
+ * Or if using a preprocessor or `postcss-import`:
+ *
+ * @import "utilities/background-patterns";
+ * @import "utilities/skew-transforms";
+ */
